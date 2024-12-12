@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        .sidebar{
+            margin: 0;
+            border-right: 1px solid grey;
+            height: 100vh;
+            width: 14%;
+            visibility: hidden;
+        }
+        .sid1{
+            color: white;
+            font-size: 30px;
+            display: block;
+            margin-left: 20px;
+            padding: 6px;
+        }
+        
+        .cross{
+           
+            size:20px;
+            margin:10px 120px;
+            
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu-item{
+            text-align: justify;
+           margin-left: 10px;
+           margin-bottom: 20px;
+        }
+        
+        .menu-list-1{
+            margin-top: 140px;
+            text-align: justify;
+           margin-left: 10px;
+           margin-bottom: 20px;
+        }
+        .menu-list-2{
+            
+            text-align: justify;
+           margin-left: 10px;
+           margin-bottom: 20px;
+        }
+        #slidebar{
+            color: black;
+        visibility: inherit;
+        }
+    </style>
+</head>
+<body>
+    <i class="fa-solid fa-bars "  id='slidebar' onclick="opensidebar()"></i>
+
+    <i class="fa-brands fa-dropbox sid1"></i>
+
+    <div class="sidebar" id="sidebar1">
+
+     
+        <i class="fa-solid fa-circle-xmark cross" onclick="closesidebar()"></i>
+        
+        <hr>
+        
+        <div class="menu-item">
+            <i class="fa-regular fa-bell"></i>
+            <a href="#" class="menu-text">Notifications</a>
+        </div>
+       
+        <div class="menu-item">
+            <i class="fa-regular fa-star"></i>
+            <a href="#" class="menu-text">Bookmarks</a>
+        </div>
+        <div class="menu-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <a href="#" class="menu-text">Setting</a>
+            
+        </div>
+        
+        <div class="menu-list-1"><hr><br>
+            <i class="fa-regular fa-circle-user"></i>
+            <a href="#" class="menu-text">Profile</a>
+            <hr>
+        </div>
+        <div class="menu-list-2">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <a href="#" class="menu-text">logout</a>
+            
+        </div><hr>
+    </div>
+    <script src="https://kit.fontawesome.com/f09217f04e.js" crossorigin="anonymous">
+    </script>
+    <script>
+        function opensidebar()
+        {
+            const sidebarelement = document.getElementById("sidebar1");
+            sidebarelement.style.visibility='visible';
+            const hamburger = document.getElementById("slidebar");
+            hamburger.style.visibility='hidden';
+        }
+        function closesidebar()
+        {
+            const sidebarelement = document.getElementById("sidebar1");
+            sidebarelement.style.visibility='hidden';
+            const hamburger = document.getElementById("slidebar");
+            hamburger.style.visibility='visible';
+        }
+    </script>
+</body>
+</html>
